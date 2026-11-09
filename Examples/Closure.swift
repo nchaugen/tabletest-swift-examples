@@ -1,10 +1,9 @@
 import Foundation
 
-/// How a bottle is closed. The raw values are the keys the app stores; a table names a case as
-/// Swift code does, `screwCap`.
+/// How a bottle is closed. A table names a case by its raw value, `screw cap`.
 nonisolated enum Closure: String, Codable, CaseIterable {
     case cork
-    case screwCap = "screw_cap"
+    case screwCap = "screw cap"
     case glass
 
     /// The days an opened bottle keeps fresh under this closure.
