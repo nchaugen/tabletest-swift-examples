@@ -1,8 +1,9 @@
 # TableTest for Swift — examples
 
-An Xcode project that uses [tabletest-swift](../tabletest-swift) through a local
-package reference. It is both a set of examples and the local test bed for
-developing TableTest for Swift, as `tabletest-examples` is for the JVM.
+An Xcode project that uses [tabletest-swift](https://github.com/nchaugen/tabletest-swift)
+through a local package reference: clone both repos into one folder, so that this project finds
+the package at `../tabletest-swift`. It is both a set of examples and the local test bed for
+developing TableTest for Swift, as [tabletest-examples](https://github.com/nchaugen/tabletest-examples) is for the JVM.
 
 The app target uses MainActor default isolation and the test target runs hosted in
 the app, the setup of a typical SwiftUI app.
