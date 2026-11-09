@@ -16,3 +16,7 @@ xcodebuild test -project Examples.xcodeproj -scheme Examples \
 
 Add `'SWIFT_ACTIVE_COMPILATION_CONDITIONS=DEBUG PROBE_FAILING'` to also run the
 probe tables that fail on purpose.
+
+## License
+
+Licensed under the [Apache License, Version 2.0](LICENSE), as the other TableTest products are.
