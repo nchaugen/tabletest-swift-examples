@@ -153,7 +153,7 @@
 			mainGroup = AA0000000000000000000002;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				AA0000000000000000000801 /* XCLocalSwiftPackageReference "../tabletest-swift" */,
+				AA0000000000000000000801 /* XCRemoteSwiftPackageReference "tabletest-swift" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = AA0000000000000000000003 /* Products */;
@@ -351,16 +351,21 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCLocalSwiftPackageReference section */
-		AA0000000000000000000801 /* XCLocalSwiftPackageReference "../tabletest-swift" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = "../tabletest-swift";
+/* Begin XCRemoteSwiftPackageReference section */
+		AA0000000000000000000801 /* XCRemoteSwiftPackageReference "tabletest-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nchaugen/tabletest-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.0;
+			};
 		};
-/* End XCLocalSwiftPackageReference section */
+/* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
 		AA0000000000000000000601 /* TableTest */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = AA0000000000000000000801 /* XCRemoteSwiftPackageReference "tabletest-swift" */;
 			productName = TableTest;
 		};
 /* End XCSwiftPackageProductDependency section */
