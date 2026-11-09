@@ -23,6 +23,17 @@ struct YearTests {
         #expect(Year(year).isLeap == leap)
     }
 
+    @TableTest("""
+        Scenario                     | Year               | Leap?
+        Not divisible by 4           | {2001, 2002, 2003} | false
+        Divisible by 4               | {2004, 2008, 2012} | true
+        Divisible by 100, not by 400 | {1900, 2100}       | false
+        Divisible by 400             | {2000, 2400}       | true
+        """)
+    func knowsALeapYearForEachExample(year: Int, leap: Bool) {
+        #expect(Year(year).isLeap == leap)
+    }
+
     #if PROBE_FAILING
     /// Fails on purpose: one cell does not convert, and one row expects the wrong answer.
     @TableTest("""
