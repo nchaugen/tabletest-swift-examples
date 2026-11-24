@@ -87,7 +87,7 @@ assert [case["displayName"] for case in collision] == ["[a, b] | 2 [1.1]", "[a, 
 disabled, = cases("disabledTable")
 assert disabled["status"] == "Skipped", disabled
 
-pages = run / "report/examplestests-resultbundleprobe"
+pages = run / "report/result-bundle-probe"
 collision_page = (pages / "names-collide-within-one-row.html").read_text()
 assert "of 2 scenarios broken" in collision_page
 assert "[a, b] | 2 [1.2]" in collision_page
