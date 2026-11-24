@@ -3,6 +3,7 @@ import TableTest
 import Testing
 @testable import Examples
 
+@Suite("Result bundle probe")
 struct ResultBundleProbe {
     @TableTest("Leap year result bundle probe", .serialized, table: """
         Scenario         | Year               | Leap?
