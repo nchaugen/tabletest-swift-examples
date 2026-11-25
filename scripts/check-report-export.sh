@@ -94,5 +94,9 @@ assert "[a, b] | 2 [1.2]" in collision_page
 assert 'class="coll set"' in collision_page
 disabled_page = (pages / "disabled-table.html").read_text()
 assert "Skipped: 1. Test skipped: Disabled on purpose" in disabled_page
+assert "A disabled table still has a page." in disabled_page
+leap_page = (pages / "leap-year-result-bundle-probe.html").read_text()
+assert "Both rows check 2004, so their cases share a name." in leap_page
+assert "The second row fails on purpose." in leap_page
 print(f"Verified the report and exported outcomes for {len(tables)} tables.")
 PY

@@ -5,6 +5,9 @@ import Testing
 
 @Suite("Result bundle probe")
 struct ResultBundleProbe {
+    /// Both rows check 2004, so their cases share a name.
+    ///
+    /// The second row fails on purpose.
     @TableTest("Leap year result bundle probe", .serialized, table: """
         Scenario         | Year               | Leap?
         Check leap years | {2004, 1900, 2000} | true
@@ -25,6 +28,7 @@ struct ResultBundleProbe {
         #expect(values.count == count)
     }
 
+    /// A disabled table still has a page.
     @TableTest("Disabled table", .disabled("Disabled on purpose"), table: """
         Value
         1
