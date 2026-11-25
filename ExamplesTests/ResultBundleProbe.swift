@@ -3,6 +3,7 @@ import TableTest
 import Testing
 @testable import Examples
 
+/// Tables that fail, skip and collide on purpose, for the export check.
 @Suite("Result bundle probe")
 struct ResultBundleProbe {
     /// Both rows check 2004, so their cases share a name.

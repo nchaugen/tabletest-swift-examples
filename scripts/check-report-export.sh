@@ -95,6 +95,8 @@ assert 'class="coll set"' in collision_page
 disabled_page = (pages / "disabled-table.html").read_text()
 assert "Skipped: 1. Test skipped: Disabled on purpose" in disabled_page
 assert "A disabled table still has a page." in disabled_page
+suite_page = (pages / "index.html").read_text()
+assert "Tables that fail, skip and collide on purpose, for the export check." in suite_page
 leap_page = (pages / "leap-year-result-bundle-probe.html").read_text()
 assert "Both rows check 2004, so their cases share a name." in leap_page
 assert "The second row fails on purpose." in leap_page
