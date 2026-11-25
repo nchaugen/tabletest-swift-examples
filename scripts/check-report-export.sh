@@ -95,6 +95,9 @@ assert 'class="coll set"' in collision_page
 disabled_page = (pages / "disabled-table.html").read_text()
 assert "Skipped: 1. Test skipped: Disabled on purpose" in disabled_page
 assert "A disabled table still has a page." in disabled_page
+cellar = run / "export/yaml/closure-tests/TABLETEST-closure-tests.yaml"
+assert 'className: "ExamplesTests.Cellar.ClosureTests"' in cellar.read_text()
+assert (run / "report/cellar/closure-tests/index.html").exists()
 suite_page = (pages / "index.html").read_text()
 assert "Tables that fail, skip and collide on purpose, for the export check." in suite_page
 leap_page = (pages / "leap-year-result-bundle-probe.html").read_text()
